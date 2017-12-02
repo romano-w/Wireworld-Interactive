@@ -72,7 +72,6 @@ class Matrix:
             pass
 
         if neighbor_count == 1 or neighbor_count == 2:
-            print(neighbor_count)
             return True
         else:
             return False
@@ -82,14 +81,22 @@ class Matrix:
         Progress to the next generation of the matrix
         :return: None
         """
+        next_matrix = []
         for row in range(len(self.matrix)):
+            temp_rowlist = []
             for col in range(len(self.matrix[0])):
+                if self.matrix[row][col] == 0:
+                    temp_rowlist.append(0)
                 if self.matrix[row][col] == 1:
-                    self.matrix[row][col] = 2
+                    temp_rowlist.append(2)
                 elif self.matrix[row][col] == 2:
-                    self.matrix[row][col] = 3
+                    temp_rowlist.append(3)
                 elif self.matrix[row][col] == 3 and self._is_electron([row, col]):
-                    self.matrix[row][col] = 1
+                    temp_rowlist.append(1)
+                elif self.matrix[row][col] == 3 and not self._is_electron([row, col]):
+                    temp_rowlist.append(3)
+            next_matrix.append(temp_rowlist)
+        self.matrix = next_matrix
 
 
 

@@ -28,9 +28,13 @@ def main():
     matrix.matrix[7][17], matrix.matrix[7][18], matrix.matrix[7][19], matrix.matrix[7][20], matrix.matrix[7][21], matrix.matrix[7][22] = 3, 3, 3, 3, 3, 3
     matrix.matrix[7][23], matrix.matrix[7][24], matrix.matrix[7][25], matrix.matrix[7][26], matrix.matrix[7][27], matrix.matrix[7][28], matrix.matrix[7][29] = 3, 3, 3, 3, 3, 3, 3
 
+    # matrix.term_display()
+    # print(matrix._is_electron([6, 15]))
+    # matrix.term_display()
+
     while True:
         matrix.term_display()
-        time.sleep(2)
+        time.sleep(.4)
         matrix.generation_progress()
 
 
