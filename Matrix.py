@@ -44,15 +44,52 @@ class Matrix:
                     print("\033[92m" + "\033[1m" + str(col) + "\033[0m", end="")
             print("")
 
-    def _num_neighbors(self):
+    def _is_electron(self, location):
         """
-        Finds the number of neighbors for a given cell.
-        :return: Returns an int
+        Finds the number of neighboring electrons and returns True if there are one or two
+        :param location: The location in the matrix to check (represented as a list)
+        :return: Returns True or False
         """
-        
+        neighbor_count = 0
+        try:
+            if self.matrix[location[0]][location[1] - 1] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0] - 1][location[1] - 1] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0] - 1][location[1]] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0] - 1][location[1] + 1] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0]][location[1] + 1] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0] + 1][location[1] + 1] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0] + 1][location[1]] == 1:
+                neighbor_count += 1
+            if self.matrix[location[0] + 1][location[1] - 1] == 1:
+                neighbor_count += 1
+        except IndexError:
+            pass
 
+        if neighbor_count == 1 or neighbor_count == 2:
+            print(neighbor_count)
+            return True
+        else:
+            return False
 
-
+    def generation_progress(self):
+        """
+        Progress to the next generation of the matrix
+        :return: None
+        """
+        for row in range(len(self.matrix)):
+            for col in range(len(self.matrix[0])):
+                if self.matrix[row][col] == 1:
+                    self.matrix[row][col] = 2
+                elif self.matrix[row][col] == 2:
+                    self.matrix[row][col] = 3
+                elif self.matrix[row][col] == 3 and self._is_electron([row, col]):
+                    self.matrix[row][col] = 1
 
 
 
