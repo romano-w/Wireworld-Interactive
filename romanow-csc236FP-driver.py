@@ -9,6 +9,7 @@
 
 import time
 from Matrix import *
+import django
 
 
 def main():
@@ -16,6 +17,7 @@ def main():
     Add docstring
     :return: None
     """
+    print(django.get_version())
     matrix = Matrix(30, 15)
 
     # Top half of timer
