@@ -17,7 +17,6 @@ def main():
     Add docstring
     :return: None
     """
-    print(django.get_version())
     matrix = Matrix(30, 15)
 
     # Top half of timer

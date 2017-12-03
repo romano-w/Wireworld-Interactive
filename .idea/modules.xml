@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Conways-Game-of-Life.iml" filepath="$PROJECT_DIR$/.idea/Conways-Game-of-Life.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Wireworld-Interactive.iml" filepath="$PROJECT_DIR$/.idea/Wireworld-Interactive.iml" />
     </modules>
   </component>
 </project>
