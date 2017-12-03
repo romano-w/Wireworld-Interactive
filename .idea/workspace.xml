@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3977bf2-fc36-497e-83b2-b66ec6b20809" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wireworldinteractive/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/romanow-csc236FP-driver.py" afterPath="$PROJECT_DIR$/romanow-csc236FP-driver.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/Conways-Game-of-Life.iml" afterPath="$PROJECT_DIR$/.idea/Wireworld-Interactive.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,13 +46,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wireworldinteractive/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+            <state relative-caret-position="96">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wireworldinteractive/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,6 +113,7 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/romanow-csc236FP-driver.py" />
         <option value="$PROJECT_DIR$/wireworldinteractive/views.py" />
+        <option value="$PROJECT_DIR$/wireworldinteractive/urls.py" />
       </list>
     </option>
   </component>
@@ -495,10 +506,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wireworldinteractive/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="36" lean-forward="true" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        <state relative-caret-position="96">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireworldinteractive/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
