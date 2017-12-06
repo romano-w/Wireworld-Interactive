@@ -12,14 +12,14 @@ from Matrix import *
 from flask import Flask, request, Blueprint, render_template
 import datetime
 
-frontend = Blueprint('frontend', __name__)
+# frontend = Blueprint('frontend', __name__)
 
+#
+# @frontend.route("/")
+# def index():
+#     return render_template("index.html")
 
-@frontend.route("/")
-def index():
-    return render_template("index.html")
-
-# app = Flask(__name__, static_url_path="")
+app = Flask(__name__, static_url_path="")
 
 
 # @app.route("/")
@@ -38,16 +38,16 @@ def index():
 #     return render_template('%s.html' % page_name)
 
 
-# @app.route("/")
-# def homepage():
-#     the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
-#
-#     return """
-#     <h1>Hello heroku</h1>
-#     <p>It is currently {time}.</p>
-#
-#     <img src="http://loremflickr.com/600/400">
-#     """.format(time=the_time)
+@app.route("/")
+def homepage():
+    the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
+
+    return """
+    <h1>Hello heroku</h1>
+    <p>It is currently {time}.</p>
+
+    <img src="http://loremflickr.com/600/400">
+    """.format(time=the_time)
 
 
 def main():
@@ -74,4 +74,5 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=True, use_reloader=True)
+    # app.run(host="127.0.0.1", port=5000, debug=True, use_reloader=True)
+    app.run(debug=True, use_reloader=True)
