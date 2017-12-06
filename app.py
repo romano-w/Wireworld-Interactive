@@ -17,7 +17,7 @@ app = Flask(__name__, static_url_path="")
 
 @app.route("/")
 def homepage():
-    return app.send_static_file("index.html")
+    return app.send_static_file("/web/index.html")
 
 # @app.route("/")
 # def homepage():
