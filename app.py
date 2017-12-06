@@ -74,4 +74,4 @@ def main():
 
 
 if __name__ == "__main__":
-    app.run(IP="127.0.0.1", PORT=8080, debug=True, use_reloader=True)
+    app.run(host="127.0.0.1", port=5000, debug=True, use_reloader=True)
