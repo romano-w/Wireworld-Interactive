@@ -9,22 +9,27 @@
 
 import time
 from Matrix import *
-from flask import Flask
+from flask import Flask, render_template
 import datetime
 
 app = Flask(__name__)
 
 
-@app.route("/")
-def homepage():
-    the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
+@app.route('/')
+def render_static(page_name):
+    return render_template('%s.html' % page_name)
 
-    return """
-    <h1>Hello heroku</h1>
-    <p>It is currently {time}.</p>
 
-    <img src="http://loremflickr.com/600/400">
-    """.format(time=the_time)
+# @app.route("/")
+# def homepage():
+#     the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
+#
+#     return """
+#     <h1>Hello heroku</h1>
+#     <p>It is currently {time}.</p>
+#
+#     <img src="http://loremflickr.com/600/400">
+#     """.format(time=the_time)
 
 
 def main():
