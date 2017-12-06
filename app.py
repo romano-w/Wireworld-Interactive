@@ -12,12 +12,12 @@ from Matrix import *
 from flask import Flask, request, send_from_directory
 import datetime
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="web")
 
 
 @app.route("/")
 def homepage():
-    return app.send_static_file("web/index.html")
+    return app.send_static_file("index.html")
 
 # @app.route("/")
 # def homepage():
