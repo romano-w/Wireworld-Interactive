@@ -9,12 +9,27 @@
 
 import time
 from Matrix import *
-import django
+from flask import Flask
+import datetime
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def homepage():
+    the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
+
+    return """
+    <h1>Hello heroku</h1>
+    <p>It is currently {time}.</p>
+
+    <img src="http://loremflickr.com/600/400">
+    """.format(time=the_time)
 
 
 def main():
     """
-    Add docstring
+    TODO:Add docstring
     :return: None
     """
     matrix = Matrix(30, 15)
@@ -29,10 +44,6 @@ def main():
     matrix.matrix[7][17], matrix.matrix[7][18], matrix.matrix[7][19], matrix.matrix[7][20], matrix.matrix[7][21], matrix.matrix[7][22] = 3, 3, 3, 3, 3, 3
     matrix.matrix[7][23], matrix.matrix[7][24], matrix.matrix[7][25], matrix.matrix[7][26], matrix.matrix[7][27], matrix.matrix[7][28], matrix.matrix[7][29] = 3, 3, 3, 3, 3, 3, 3
 
-    # matrix.term_display()
-    # print(matrix._is_electron([6, 15]))
-    # matrix.term_display()
-
     while True:
         matrix.term_display()
         time.sleep(.4)
@@ -40,4 +51,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    app.run(debug=True, use_reloader=True)
