@@ -9,17 +9,22 @@
 
 import time
 from Matrix import *
-from flask import Flask, render_template
+from flask import Flask, request, send_from_directory
 import datetime
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def homepage():
-    the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
+    return app.send_static_file("web/index.html")
 
-    html = render_template('homepage.html', time=the_time)
-    return html
+# @app.route("/")
+# def homepage():
+#     the_time = datetime.time().strftime("%A, %d %b %Y %l:%M %p")
+#
+#     html = render_template('homepage.html', time=the_time)
+#     return html
 
 # @app.route('/')
 # def render_static(page_name):
