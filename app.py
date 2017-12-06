@@ -9,15 +9,22 @@
 
 import time
 from Matrix import *
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, Blueprint, render_template
 import datetime
 
-app = Flask(__name__, static_url_path="")
+frontend = Blueprint('frontend', __name__)
 
 
-@app.route("/")
-def homepage():
-    return app.send_static_file("/web/index.html")
+@frontend.route("/")
+def index():
+    return render_template("index.html")
+
+# app = Flask(__name__, static_url_path="")
+
+
+# @app.route("/")
+# def homepage():
+#     return app.send_static_file("/web/index.html")
 
 # @app.route("/")
 # def homepage():
