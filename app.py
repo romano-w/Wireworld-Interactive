@@ -15,7 +15,6 @@ import datetime
 # frontend = Blueprint('frontend', __name__)
 app = Flask(__name__, static_url_path="")
 
-# Testing commit and push to GitHub
 
 @app.route("/")
 def index():
